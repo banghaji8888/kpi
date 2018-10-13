@@ -16,6 +16,10 @@ function hashing(password){
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('users', {
     name: DataTypes.STRING(100),
+    birth_place: DataTypes.STRING(100),
+    birth_day: DataTypes.DATEONLY,
+    gender: DataTypes.ENUM('Laki-laki','Perempuan'),
+    last_qualification: DataTypes.STRING(100),
     email: DataTypes.STRING,
     phone: DataTypes.STRING,
     nik: {
