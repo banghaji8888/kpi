@@ -27,6 +27,9 @@ fs
 //   }
 // })
 db['users'].belongsTo(db['groups'])
+db['positions'].belongsTo(db['work_units'])
+db['sections'].belongsTo(db['positions'])
+db['job_desks'].belongsTo(db['sections'])
 
 db.sequelize = sequelize
 db.Sequelize = Sequelize
